@@ -518,6 +518,12 @@ nav a.active {
   object-position: left center;
 }
 
+#rotating-text {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+  min-width: 150px; /* Prevents layout shift during text change */
+}
+
 @media (max-width: 767px) {
   .navbar-sticky .h-24 {
     height: 7rem;
