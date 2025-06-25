@@ -42,9 +42,21 @@ body {
   background: #f3f4f6;
 }
 
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
 .gallery-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /* Input group styles */
@@ -116,17 +128,6 @@ body {
   overflow: hidden;
 }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
 /* Modal Styles */
 #imageModal {
   transition: opacity 0.3s ease;
@@ -155,6 +156,41 @@ body {
 #closeModal:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Hero Section */
+#home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#home img[alt="ikony"] {
+  max-width: 500px; 
+  margin: 0 auto 2rem; 
+  display: block; 
+  padding-bottom: 2rem;
+}
+
+.hero-animation {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #home img[alt="ikony"] {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 1/1;
+  }
 }
 
 /* Responsive adjustments */
