@@ -1,13 +1,21 @@
 :root {
   /* Main colors */
-  --dark-bg: #fef5d6; /* Dark background for headers, footer, buttons */
-  --accent-red: #e91b28; /* Main accent color */
-  --accent-red-dark: #e91b28; /* Darker red for hover states */
-  --light-bg: #f5f5f5; /* Light background for content sections */
-  --white: #2d2d2d; /* Main background, section headers */
-  --text-primary: #2d2d2d; /* Main text color */
-  --text-secondary: #7a7a7a; /* Secondary text color */
-  --border-color: #e4e4e4; /* Borders, dividers, form backgrounds */
+  --dark-bg: #fef5d6;
+  /* Dark background for headers, footer, buttons */
+  --accent-red: #e91b28;
+  /* Main accent color */
+  --accent-red-dark: #e91b28;
+  /* Darker red for hover states */
+  --light-bg: #f5f5f5;
+  /* Light background for content sections */
+  --white: #2d2d2d;
+  /* Main background, section headers */
+  --text-primary: #2d2d2d;
+  /* Main text color */
+  --text-secondary: #555555;
+  /* Secondary text color - darkened for contrast */
+  --border-color: #e4e4e4;
+  /* Borders, dividers, form backgrounds */
 
   /* Utility colors */
   --shadow-color: rgba(30, 28, 28, 0.1);
@@ -101,10 +109,10 @@ body {
 }
 
 /* Style for when select has a value */
-.input-group select:focus + label,
-.input-group input:focus + label,
-.input-group select.has-value + label,
-.input-group input:not(:placeholder-shown) + label,
+.input-group select:focus+label,
+.input-group input:focus+label,
+.input-group select.has-value+label,
+.input-group input:not(:placeholder-shown)+label,
 .input-group.has-value label {
   top: -0.5rem;
   left: 0.75rem;
@@ -170,9 +178,9 @@ body {
 }
 
 #home img[alt="ikony"] {
-  max-width: 500px; 
-  margin: 0 auto 2rem; 
-  display: block; 
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: block;
   padding-bottom: 2rem;
 }
 
@@ -187,7 +195,7 @@ body {
     max-width: 90%;
     padding: 0 1rem;
   }
-  
+
   .gallery-item {
     aspect-ratio: 1/1;
   }
@@ -268,6 +276,7 @@ body {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
@@ -464,11 +473,11 @@ body {
   pointer-events: none;
 }
 
-.input-group input:focus + label,
-.input-group textarea:focus + label,
-.input-group select:focus + label,
-.input-group input:not(:placeholder-shown) + label,
-.input-group textarea:not(:placeholder-shown) + label {
+.input-group input:focus+label,
+.input-group textarea:focus+label,
+.input-group select:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group textarea:not(:placeholder-shown)+label {
   top: -10px;
   left: 10px;
   font-size: 12px;
@@ -557,7 +566,8 @@ nav a.active {
 #rotating-text {
   display: inline-block;
   transition: opacity 0.5s ease-in-out;
-  min-width: 150px; /* Prevents layout shift during text change */
+  min-width: 150px;
+  /* Prevents layout shift during text change */
 }
 
 @media (max-width: 767px) {
